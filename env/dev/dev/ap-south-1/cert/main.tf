@@ -7,7 +7,7 @@ variable "secretName" {default = "test"}
 
 
 module "cert" {
-  source = "D:\\AWS-TF\\tf-single-subnet\\infra-terraform\\modules\\cert"
+  source = "git::https://github.com/danielarockia/eksmodule.git//modules/cert/"
   namespace_name = var.namespace_name
   cluster_issuer_name = var.cluster_issuer_name
   create_namespace =var.create_namespace
